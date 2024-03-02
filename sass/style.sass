@@ -1,0 +1,103 @@
+@import 'normolize'
+// @import 'fonts'
+@import 'elements'
+
+main
+    min-height: 100vh
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    background-image: url('../img/bg_strip.svg')
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    .logo
+        text-align: right
+        margin: 0
+        width: 100%
+        max-width: 1163px
+        padding: 50px 15px
+
+    .container
+        margin: auto 0
+
+.sender
+    text-align: center
+    padding-right: 30px
+    &__text
+        font-weight: 500
+        font-size: 24px
+    .img
+        width: 184px
+        height: 184px
+        margin: 6px auto 11px
+
+.popular
+    text-align: center
+    width: 322px
+    .headline
+        margin-bottom: 20px
+
+    .wrap
+        gap: 20px
+
+    .img
+        width: 142px
+        height: 142px
+
+.box
+    background-color: #212121
+    width: 100%
+    max-width: 1010px
+    box-shadow: 0px 10px 40px 0px #00000040
+    min-height: 40px
+    border-radius: 64px
+    padding: 32px 50px
+
+.footer
+    padding: 30px 0 18px
+    a
+        display: inline-block
+        padding: 8px
+
+    img
+        border-radius: 14px
+        opacity: .6
+        &:hover
+            opacity: 1
+
+.content:not(.is_active)
+    // display: none
+    margin-bottom: 100px
+
+.main
+    .box
+
+.sucsess
+    justify-content: space-between
+    .box
+        width: calc( 100% - 362px )
+
+    .popular
+        // width: 34%
+
+    .btn_green
+        margin-top: 13px
+
+.error
+    &_link
+        .box
+            max-width: 777px
+            margin: 0 auto
+        .textline
+            margin-bottom: 16px
+
+    &_delivery
+        .box
+            max-width: 800px
+            margin: 0 auto 
+        
+        .heading
+            margin-top: 34px
+            mix-blend-mode: difference
