@@ -12,22 +12,31 @@ main
     align-items: center
     justify-content: center
     flex-direction: column
-    .logo
-        text-align: right
-        margin: 0
-        width: 100%
-        max-width: 1163px
-        padding: 50px 15px
 
     .container
         margin: auto 0
 
+    @media screen and ( max-width: 1000px )
+        background-position: right center
+
+.logo
+    text-align: right
+    margin: 0
+    width: 100%
+    max-width: 1163px
+    padding: 50px 15px
+
 .sender
     text-align: center
-    padding-right: 30px
+    width: 200px !important
+    margin: 0 2% 0 0
     &__text
+        display: block
         font-weight: 500
         font-size: 24px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
     .img
         width: 184px
         height: 184px
@@ -60,12 +69,13 @@ main
     a
         display: inline-block
         padding: 8px
-
-    img
-        border-radius: 14px
         opacity: .6
         &:hover
             opacity: 1
+
+    img
+        border-radius: 14px
+        box-shadow: 0px 4px 4px 0px #00000040
 
 .content:not(.is_active)
     // display: none
@@ -96,8 +106,56 @@ main
     &_delivery
         .box
             max-width: 800px
-            margin: 0 auto 
-        
+            margin: 0 auto
+
         .heading
             margin-top: 34px
-            mix-blend-mode: difference
+
+@media screen and ( max-width: 1000px )
+    .main
+        text-align: center
+        .box
+            flex-direction: column-reverse
+
+        .col
+            width: 100%
+
+        .sender
+            margin-bottom: 30px
+
+        .ranger
+            width: 100%
+
+    .sucsess
+        display: block
+        .box
+            width: 100%
+            margin-bottom: 30px
+
+    .popular
+        width: 100%
+        .wrap
+            justify-content: center
+
+@media screen and ( max-width: 700px )
+    .logo
+        padding: 20px 15px 30px
+        img
+            max-width: 120px
+    .sender
+        &__text
+            font-size: 19px
+
+        .img
+            width: 144px
+            height: 144px
+    .box
+        padding: 28px 20px
+        border-radius: 40px
+
+    .footer
+        a
+            opacity: 1
+        img
+            width: 40px
+            border-radius: 9px

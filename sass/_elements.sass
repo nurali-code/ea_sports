@@ -52,7 +52,7 @@ ul
     list-style: none
 
 .btn
-    &__white
+    &_white
         padding: 5px 24px
         display: inline-block
         background-color: #fff
@@ -114,10 +114,9 @@ input
     font-size: 36px
     text-align: center
     margin: 0
-
-.title
-    text-align: center
-    margin-bottom: 35px
+    // white-space: nowrap
+    // overflow: hidden
+    // text-overflow: ellipsis
 
 .headline
     font-size: 48px
@@ -138,6 +137,12 @@ input
 .textline
     font-size: 24px
 
+.title
+    text-align: center
+    margin-bottom: 35px
+    .textline
+        margin: 0 !important
+
 .img
     width: 142px
     height: 142px
@@ -152,6 +157,16 @@ input
 .heading
     font-size: 36px
     margin: 0
+    &.wrap
+        justify-content: flex-start
+        gap: 6px
+
+    img
+        vertical-align: middle
+        display: inline-block
+
+.difference
+    mix-blend-mode: difference
 
 .ranger
     background-color: #fff
@@ -170,13 +185,134 @@ input
     &__text
         mix-blend-mode: difference
         color: white
+
     &__item
         position: absolute
         top: 7px
         left: 7px
-        width: calc( 100% - 14px )
-        width: 20%
-        border-radius: 40px
+        max-width: calc( 100% - 14px )
         height: calc( 100% - 14px )
+        border-radius: 40px
+        transform-origin: 0 0
         background-color: #000
         z-index: -1
+        animation: ranger_anim 15s ease infinite
+
+@keyframes ranger_anim
+    0%
+        width: 14%
+        left: 7px
+        right: auto
+
+    25%
+        left: 7px
+        right: auto
+        width: 100%
+
+    25.01%
+        width: 100%
+        left: auto
+        right: 7px
+
+    50%
+        left: auto
+        right: 7px
+        width: 14%
+
+    75%
+        left: auto
+        right: 7px
+        width: 100%
+
+    75.01%
+        left: 7px
+        right: auto
+
+    100%
+        left: 7px
+        right: auto
+        width: 14%
+
+@media screen and ( max-width: 1100px )
+    .ranger
+        font-size: 32px
+        width: 100%
+
+    .h1
+        font-size: 34px
+
+    .headline
+        font-size: 40px
+
+    .heading
+        font-size: 30px
+
+    .btn
+        &_green
+            font-size: 40px
+
+    .textline
+        font-size: 20px
+
+@media screen and ( max-width: 700px )
+    .h1
+        font-size: 22px
+
+    .img
+        border-radius: 35px
+
+    .heading
+        font-size: 20px
+        img
+            max-width: 22px
+
+    .headline
+        font-size: 26px
+
+    .textline
+        font-size: 16px
+
+    .title
+        margin-bottom: 20px
+
+    .form
+        margin: 8px 0 24px
+        display: block
+        text-align: center
+        input
+            width: 100%
+            font-size: 16px
+            height: 45px
+
+        .btn_white
+            text-align: center
+            display: block
+            width: 60%
+            margin: 10px auto 0
+            img
+                margin: 0 auto
+                width: 30px
+
+    .ranger
+        font-size: 20px
+        padding: 15px
+        margin-bottom: 29px
+        &__item
+            top: 5px
+            left: 5px
+            max-width: calc( 100% - 10px )
+            height: calc( 100% - 10px )
+
+    .link
+        font-size: 20px
+        line-height: 130%
+
+    .btn
+        &_sm
+            font-size: 14px
+            min-width: 130px
+            margin: 0 3px 8px
+
+        &_green
+            font-size: 20px
+            padding: 8px 10px 13px
