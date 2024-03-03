@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>🎁EA SPORTS FC™ 24 Standard Edition</title>
+	<meta name="theme-color" content="#9b35c1">
+	<link type="image/svg" rel="shortcut icon" href="./favicon.svg">
+
+
+	<link rel="stylesheet" href="./fonts/stylesheet.css">
+	<link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+	<main>
+		<div class="logo"><img src="img/logo.svg" alt="logo"></div>
+
+		<div class="content error_link is_active">
+			<div class="title">
+				<h2 class="h1">🎁EA SPORTS FC™ 24 Standard Edition
+					🎁EA SPORTS FC™ 24 Standard Edition
+					🎁EA SPORTS FC™ 24 Standard Edition
+					🎁EA SPORTS FC™ 24 Standard Edition
+				</h2>
+				<p class="textline">заказ #203668479</p>
+			</div>
+			<div class="box">
+				<p class="textline">❌Ошибка доставки: введена неверная ссылка</p>
+				<h2 class="heading wrap">
+					<div class="info">
+						<span class="info__text">
+							Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Диких
+							первую раз использовало ручеек большого которое свой повстречался вопрос?
+						</span>
+					</div>
+					Введите верную ссылку:
+				</h2>
+				<form class="form wrap">
+					<input type="text" placeholder="Ваша ссылка на профиль/быстрое приглашение" required>
+					<button class="btn_white" type="submit"><img src="img/update_ic.svg" alt="update_ic"></button>
+				</form>
+				<a href="#" class="btn_sm">Чат с продавцом</a>
+				<a href="#" class="btn_sm">Инструкция</a>
+			</div>
+		</div>
+
+		<div class="footer wrap">
+			<a href="#" target="_blank"><img src="img/Telegram.svg" alt="Telegram"></a>
+			<a href="#" target="_blank"><img src="img/Russia.svg" alt="Russia"></a>
+		</div>
+	</main>
+
+	<script>
+		let h1Elements = document.getElementsByClassName('h1');
+		let maxLength = 50;
+		Array.from(h1Elements).forEach(element => {
+			let text = element.textContent.replace(/\s+/g, ' ').trim();
+
+			if (text.length > maxLength) {
+				let newText = text.substring(0, maxLength) + '...';
+				element.textContent = newText;
+			}
+		});
+	</script>
+
+
+</body>
+
+</html>
